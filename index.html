@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日志浏览</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll()
+    </script>
+</head>
+
+<body>
+    <div class="container controller">
+        <h1 class="title">日志浏览</h1>
+        <div id="allPut">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="每页行数" aria-label="line"
+                    aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="changeLine()">确定</button>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="页数" aria-label="page"
+                    aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="changePage()">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <pre id="log">
+            <code class="language-plaintext" id="code"></code>
+        </pre>
+        <nav id='nav'></nav>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
